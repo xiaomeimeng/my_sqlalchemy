@@ -34,7 +34,7 @@ from sql_test import MysqlHelper
 
 @current_app.route('/', methods=['GET', 'POST'])
 def index():
-    obj = MysqlHelper.fetch_one("select id,name from users where name=%s", "zhangan")
+    obj = MysqlHelper.fetch_one("select id from users where name=%s", "zhangan")
     return obj
 
 
